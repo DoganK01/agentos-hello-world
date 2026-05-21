@@ -7,7 +7,7 @@ from the LLM config wired into the sandbox env.
 
 Configure in AgentOS as:
     Command:   python agent.py --input={input:string}
-    LLM:       openai/gpt-5.5
+    LLM:       anthropic/claude-sonnet-4-6
 """
 
 import argparse
@@ -21,7 +21,7 @@ from upsonic import Agent
 async def run(user_input: str) -> str:
     """Send `user_input` to the model and return the assistant reply."""
     agent = Agent(
-        "openai/gpt-5.5",
+        "anthropic/claude-sonnet-4-6",
         system_prompt=(
             "You are a friendly hello-world demo agent. "
             "Greet the user warmly in one short sentence, "
